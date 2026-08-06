@@ -32,7 +32,7 @@ const App = () => {
         : system.includes("Android")
           ? "Android"
           : system.includes("iPhone")
-            ? "IPhone"
+            ? "IOS"
             : system.includes("Mac")
               ? "MacOs"
               : "Not found",
@@ -137,7 +137,7 @@ const App = () => {
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        <Marker position={Position} />
+        <Marker position={Position}/>
       </MapContainer>
     </div>
   );
