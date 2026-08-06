@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import MyMap from "./components/MyMap";
+
 
 const App = () => {
   const [Infoobject, setInfoobject] = useState({});
@@ -129,16 +130,7 @@ const App = () => {
         </tr>
       </table>
 
-      <MapContainer
-        center={Position}
-        zoom={13}
-        // style={{ width: "50%", height: "50vh" }}
-        className="w-[90%] h-[40vh] sm:w-[50%] sm:h-[50vh]"
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-        <Marker position={Position}/>
-      </MapContainer>
+      <MyMap position={Position}/>
     </div>
   );
 };
